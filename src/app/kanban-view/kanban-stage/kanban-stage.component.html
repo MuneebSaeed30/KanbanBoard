@@ -1,6 +1,6 @@
 <div class='kanban_stage'>
   <h2 class='kanban_header'>{{ stage.name }}</h2>
   <div class='kanban_card_container'>
-    <app-kanban-card *ngFor="let card of stage.cards" (onCardSelected)="onCardSelected($event)" [card]='card'></app-kanban-card>
+    <app-kanban-card *ngFor="let card of stage.cards" (onCardSelected)="onCardSelected({cardId: $event.cardId, stageId: stage.id})" [card]='card'></app-kanban-card>
   </div>
 </div>

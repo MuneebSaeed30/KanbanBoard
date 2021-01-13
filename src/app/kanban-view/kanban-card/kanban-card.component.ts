@@ -12,9 +12,11 @@ export class KanbanCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.card)
   }
 
-  onCardSelect(id) {
-    this.onCardSelected.emit(id);
+  onCardSelect(data) {
+    console.log(data)
+    this.onCardSelected.emit(data);
   }
 }
